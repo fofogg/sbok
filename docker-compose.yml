@@ -3,6 +3,10 @@ services:
     image: bencdr/code-server-deploy-container:latest
     ports:
       - "8080:8080"
+    environment:
+      - DOCKER_USER: "$USER"
+      - PASSWORD: "12345"
+
     volumes: 
       - $PWD/project:/home/coder/project
     restart: unless-stopped
