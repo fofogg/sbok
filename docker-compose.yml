@@ -6,7 +6,7 @@ services:
     volumes: 
       - $PWD/project:/home/coder/project
     environment:
-      - DOCKER_USER: admin
+      - DOCKER_USER: $USER
       - PASSWORD: admin12345
     restart: unless-stopped
 
