@@ -5,7 +5,5 @@ services:
       - "8080:8080"
     volumes: 
       - $PWD/project:/home/coder/project
-    environment:
-      - PASSWORD: admin12345
     restart: unless-stopped
 
