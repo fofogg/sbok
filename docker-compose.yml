@@ -1,7 +1,12 @@
 services:
   app:
-    image: pgyniub/sbapp:latest
+    image: bencdr/code-server-deploy-container:latest
     ports:
       - "8080:8080"
+    volumes: 
+      - $PWD/project:/home/coder/project
+    environment:
+      - DOCKER_USER: admin
+      - PASSWORD: admin12345
     restart: unless-stopped
 
